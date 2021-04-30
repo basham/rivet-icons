@@ -5,43 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Rivet icons</title>
-  <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.4.0/rivet.min.css">
+  <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.8.1/rivet.min.css">
   <link rel="stylesheet" href="./rivet-icons.css">
   <style>
+  :root {
+  }
+
   body {
     position: relative;
   }
 
-  .rvt-icons-demo {
-    display: flex;
+  .ri-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0rem;
   }
-  
-  .rvt-icons-demo li a {
+
+  .ri-list__item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ri-list__link {
+    border-radius: 0.5rem;
     color: inherit;
+    display: flex;
+    padding: 1rem;
     text-decoration: none;
-    display: block;
-    padding: 2rem;
-    width: 10rem;
-    text-align: center;
   }
-  
-  .rvt-icons-demo li a:hover {
+
+  .ri-list__link:hover {
     background-color: #f7f7f7;
   }
 
-  .rvt-icons-demo__title {
-    font-size: .825rem;
-    margin-top: 1.5rem;
-    background-color: #f7f7f7;
-    display: inline-block;
-    padding: .25rem .5rem;
-    border-radius: .25rem;
-    text-transform: capitalize;
+  .ri-code-block {
+    color: inherit;
+    display: block;
+    font-size: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
   }
 
   .rvt-demo-switcher {
@@ -61,18 +66,13 @@
     background-color: #333333;
     color: #ffffff;
   }
-  
+
   svg.rvt-icon {
     display: block;
     height: 1rem;
     margin: 0 auto;
     padding: 0;
     width: 1rem;
-  }
-  
-  .rvt-icons-demo > li:target {
-    background-color: lightgoldenrodyellow;
-    scroll-margin-top: 2rem;
   }
 </style>
 </head>
@@ -82,1755 +82,707 @@
     <h1 class="rvt-ts-46 rvt-text-bold rvt-lh-title">Rivet icons</h1>
     <p class="rvt-ts-20">A minimal set of icons for the Rivet design system</p>
     <hr>
-    <ul class="rvt-icons-demo rvt-p-top-xxl">
-      
-        <li id="alarm">
-          <a href="#alarm">
-            <div>
-              <span data-rvt-icon="alarm"></span>
-            </div>
-            <div class="rvt-icons-demo__title">alarm</div>
-          </a>
-        </li>
-      
-        <li id="arrow-down">
-          <a href="#arrow-down">
-            <div>
-              <span data-rvt-icon="arrow-down"></span>
-            </div>
-            <div class="rvt-icons-demo__title">arrow down</div>
-          </a>
-        </li>
-      
-        <li id="arrow-left">
-          <a href="#arrow-left">
-            <div>
-              <span data-rvt-icon="arrow-left"></span>
-            </div>
-            <div class="rvt-icons-demo__title">arrow left</div>
-          </a>
-        </li>
-      
-        <li id="arrow-right">
-          <a href="#arrow-right">
-            <div>
-              <span data-rvt-icon="arrow-right"></span>
-            </div>
-            <div class="rvt-icons-demo__title">arrow right</div>
-          </a>
-        </li>
-      
-        <li id="arrow-up">
-          <a href="#arrow-up">
-            <div>
-              <span data-rvt-icon="arrow-up"></span>
-            </div>
-            <div class="rvt-icons-demo__title">arrow up</div>
-          </a>
-        </li>
-      
-        <li id="audio-off">
-          <a href="#audio-off">
-            <div>
-              <span data-rvt-icon="audio-off"></span>
-            </div>
-            <div class="rvt-icons-demo__title">audio off</div>
-          </a>
-        </li>
-      
-        <li id="audio-on">
-          <a href="#audio-on">
-            <div>
-              <span data-rvt-icon="audio-on"></span>
-            </div>
-            <div class="rvt-icons-demo__title">audio on</div>
-          </a>
-        </li>
-      
-        <li id="ban">
-          <a href="#ban">
-            <div>
-              <span data-rvt-icon="ban"></span>
-            </div>
-            <div class="rvt-icons-demo__title">ban</div>
-          </a>
-        </li>
-      
-        <li id="bell">
-          <a href="#bell">
-            <div>
-              <span data-rvt-icon="bell"></span>
-            </div>
-            <div class="rvt-icons-demo__title">bell</div>
-          </a>
-        </li>
-      
-        <li id="building">
-          <a href="#building">
-            <div>
-              <span data-rvt-icon="building"></span>
-            </div>
-            <div class="rvt-icons-demo__title">building</div>
-          </a>
-        </li>
-      
-        <li id="calendar">
-          <a href="#calendar">
-            <div>
-              <span data-rvt-icon="calendar"></span>
-            </div>
-            <div class="rvt-icons-demo__title">calendar</div>
-          </a>
-        </li>
-      
-        <li id="chat">
-          <a href="#chat">
-            <div>
-              <span data-rvt-icon="chat"></span>
-            </div>
-            <div class="rvt-icons-demo__title">chat</div>
-          </a>
-        </li>
-      
-        <li id="check">
-          <a href="#check">
-            <div>
-              <span data-rvt-icon="check"></span>
-            </div>
-            <div class="rvt-icons-demo__title">check</div>
-          </a>
-        </li>
-      
-        <li id="check-all">
-          <a href="#check-all">
-            <div>
-              <span data-rvt-icon="check-all"></span>
-            </div>
-            <div class="rvt-icons-demo__title">check all</div>
-          </a>
-        </li>
-      
-        <li id="check-circle">
-          <a href="#check-circle">
-            <div>
-              <span data-rvt-icon="check-circle"></span>
-            </div>
-            <div class="rvt-icons-demo__title">check circle</div>
-          </a>
-        </li>
-      
-        <li id="check-circle-breakout">
-          <a href="#check-circle-breakout">
-            <div>
-              <span data-rvt-icon="check-circle-breakout"></span>
-            </div>
-            <div class="rvt-icons-demo__title">check circle breakout</div>
-          </a>
-        </li>
-      
-        <li id="chevron-down">
-          <a href="#chevron-down">
-            <div>
-              <span data-rvt-icon="chevron-down"></span>
-            </div>
-            <div class="rvt-icons-demo__title">chevron down</div>
-          </a>
-        </li>
-      
-        <li id="chevron-left">
-          <a href="#chevron-left">
-            <div>
-              <span data-rvt-icon="chevron-left"></span>
-            </div>
-            <div class="rvt-icons-demo__title">chevron left</div>
-          </a>
-        </li>
-      
-        <li id="chevron-right">
-          <a href="#chevron-right">
-            <div>
-              <span data-rvt-icon="chevron-right"></span>
-            </div>
-            <div class="rvt-icons-demo__title">chevron right</div>
-          </a>
-        </li>
-      
-        <li id="chevron-up">
-          <a href="#chevron-up">
-            <div>
-              <span data-rvt-icon="chevron-up"></span>
-            </div>
-            <div class="rvt-icons-demo__title">chevron up</div>
-          </a>
-        </li>
-      
-        <li id="chevrons-left">
-          <a href="#chevrons-left">
-            <div>
-              <span data-rvt-icon="chevrons-left"></span>
-            </div>
-            <div class="rvt-icons-demo__title">chevrons left</div>
-          </a>
-        </li>
-      
-        <li id="chevrons-right">
-          <a href="#chevrons-right">
-            <div>
-              <span data-rvt-icon="chevrons-right"></span>
-            </div>
-            <div class="rvt-icons-demo__title">chevrons right</div>
-          </a>
-        </li>
-      
-        <li id="circle">
-          <a href="#circle">
-            <div>
-              <span data-rvt-icon="circle"></span>
-            </div>
-            <div class="rvt-icons-demo__title">circle</div>
-          </a>
-        </li>
-      
-        <li id="circle-solid">
-          <a href="#circle-solid">
-            <div>
-              <span data-rvt-icon="circle-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">circle solid</div>
-          </a>
-        </li>
-      
-        <li id="clipboard">
-          <a href="#clipboard">
-            <div>
-              <span data-rvt-icon="clipboard"></span>
-            </div>
-            <div class="rvt-icons-demo__title">clipboard</div>
-          </a>
-        </li>
-      
-        <li id="clock">
-          <a href="#clock">
-            <div>
-              <span data-rvt-icon="clock"></span>
-            </div>
-            <div class="rvt-icons-demo__title">clock</div>
-          </a>
-        </li>
-      
-        <li id="close">
-          <a href="#close">
-            <div>
-              <span data-rvt-icon="close"></span>
-            </div>
-            <div class="rvt-icons-demo__title">close</div>
-          </a>
-        </li>
-      
-        <li id="close-circle">
-          <a href="#close-circle">
-            <div>
-              <span data-rvt-icon="close-circle"></span>
-            </div>
-            <div class="rvt-icons-demo__title">close circle</div>
-          </a>
-        </li>
-      
-        <li id="close-circle-solid">
-          <a href="#close-circle-solid">
-            <div>
-              <span data-rvt-icon="close-circle-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">close circle solid</div>
-          </a>
-        </li>
-      
-        <li id="code">
-          <a href="#code">
-            <div>
-              <span data-rvt-icon="code"></span>
-            </div>
-            <div class="rvt-icons-demo__title">code</div>
-          </a>
-        </li>
-      
-        <li id="copy">
-          <a href="#copy">
-            <div>
-              <span data-rvt-icon="copy"></span>
-            </div>
-            <div class="rvt-icons-demo__title">copy</div>
-          </a>
-        </li>
-      
-        <li id="credit-card">
-          <a href="#credit-card">
-            <div>
-              <span data-rvt-icon="credit-card"></span>
-            </div>
-            <div class="rvt-icons-demo__title">credit card</div>
-          </a>
-        </li>
-      
-        <li id="data">
-          <a href="#data">
-            <div>
-              <span data-rvt-icon="data"></span>
-            </div>
-            <div class="rvt-icons-demo__title">data</div>
-          </a>
-        </li>
-      
-        <li id="download">
-          <a href="#download">
-            <div>
-              <span data-rvt-icon="download"></span>
-            </div>
-            <div class="rvt-icons-demo__title">download</div>
-          </a>
-        </li>
-      
-        <li id="ellipsis">
-          <a href="#ellipsis">
-            <div>
-              <span data-rvt-icon="ellipsis"></span>
-            </div>
-            <div class="rvt-icons-demo__title">ellipsis</div>
-          </a>
-        </li>
-      
-        <li id="ellipsis-vertical">
-          <a href="#ellipsis-vertical">
-            <div>
-              <span data-rvt-icon="ellipsis-vertical"></span>
-            </div>
-            <div class="rvt-icons-demo__title">ellipsis vertical</div>
-          </a>
-        </li>
-      
-        <li id="envelope">
-          <a href="#envelope">
-            <div>
-              <span data-rvt-icon="envelope"></span>
-            </div>
-            <div class="rvt-icons-demo__title">envelope</div>
-          </a>
-        </li>
-      
-        <li id="exclamation">
-          <a href="#exclamation">
-            <div>
-              <span data-rvt-icon="exclamation"></span>
-            </div>
-            <div class="rvt-icons-demo__title">exclamation</div>
-          </a>
-        </li>
-      
-        <li id="expand">
-          <a href="#expand">
-            <div>
-              <span data-rvt-icon="expand"></span>
-            </div>
-            <div class="rvt-icons-demo__title">expand</div>
-          </a>
-        </li>
-      
-        <li id="eye">
-          <a href="#eye">
-            <div>
-              <span data-rvt-icon="eye"></span>
-            </div>
-            <div class="rvt-icons-demo__title">eye</div>
-          </a>
-        </li>
-      
-        <li id="file">
-          <a href="#file">
-            <div>
-              <span data-rvt-icon="file"></span>
-            </div>
-            <div class="rvt-icons-demo__title">file</div>
-          </a>
-        </li>
-      
-        <li id="filter">
-          <a href="#filter">
-            <div>
-              <span data-rvt-icon="filter"></span>
-            </div>
-            <div class="rvt-icons-demo__title">filter</div>
-          </a>
-        </li>
-      
-        <li id="flag">
-          <a href="#flag">
-            <div>
-              <span data-rvt-icon="flag"></span>
-            </div>
-            <div class="rvt-icons-demo__title">flag</div>
-          </a>
-        </li>
-      
-        <li id="gear">
-          <a href="#gear">
-            <div>
-              <span data-rvt-icon="gear"></span>
-            </div>
-            <div class="rvt-icons-demo__title">gear</div>
-          </a>
-        </li>
-      
-        <li id="gears">
-          <a href="#gears">
-            <div>
-              <span data-rvt-icon="gears"></span>
-            </div>
-            <div class="rvt-icons-demo__title">gears</div>
-          </a>
-        </li>
-      
-        <li id="grid">
-          <a href="#grid">
-            <div>
-              <span data-rvt-icon="grid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">grid</div>
-          </a>
-        </li>
-      
-        <li id="heart">
-          <a href="#heart">
-            <div>
-              <span data-rvt-icon="heart"></span>
-            </div>
-            <div class="rvt-icons-demo__title">heart</div>
-          </a>
-        </li>
-      
-        <li id="heart-solid">
-          <a href="#heart-solid">
-            <div>
-              <span data-rvt-icon="heart-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">heart solid</div>
-          </a>
-        </li>
-      
-        <li id="home">
-          <a href="#home">
-            <div>
-              <span data-rvt-icon="home"></span>
-            </div>
-            <div class="rvt-icons-demo__title">home</div>
-          </a>
-        </li>
-      
-        <li id="image">
-          <a href="#image">
-            <div>
-              <span data-rvt-icon="image"></span>
-            </div>
-            <div class="rvt-icons-demo__title">image</div>
-          </a>
-        </li>
-      
-        <li id="info-circle">
-          <a href="#info-circle">
-            <div>
-              <span data-rvt-icon="info-circle"></span>
-            </div>
-            <div class="rvt-icons-demo__title">info circle</div>
-          </a>
-        </li>
-      
-        <li id="lightning">
-          <a href="#lightning">
-            <div>
-              <span data-rvt-icon="lightning"></span>
-            </div>
-            <div class="rvt-icons-demo__title">lightning</div>
-          </a>
-        </li>
-      
-        <li id="lightning-box">
-          <a href="#lightning-box">
-            <div>
-              <span data-rvt-icon="lightning-box"></span>
-            </div>
-            <div class="rvt-icons-demo__title">lightning box</div>
-          </a>
-        </li>
-      
-        <li id="link">
-          <a href="#link">
-            <div>
-              <span data-rvt-icon="link"></span>
-            </div>
-            <div class="rvt-icons-demo__title">link</div>
-          </a>
-        </li>
-      
-        <li id="link-external">
-          <a href="#link-external">
-            <div>
-              <span data-rvt-icon="link-external"></span>
-            </div>
-            <div class="rvt-icons-demo__title">link external</div>
-          </a>
-        </li>
-      
-        <li id="list">
-          <a href="#list">
-            <div>
-              <span data-rvt-icon="list"></span>
-            </div>
-            <div class="rvt-icons-demo__title">list</div>
-          </a>
-        </li>
-      
-        <li id="lock-closed">
-          <a href="#lock-closed">
-            <div>
-              <span data-rvt-icon="lock-closed"></span>
-            </div>
-            <div class="rvt-icons-demo__title">lock closed</div>
-          </a>
-        </li>
-      
-        <li id="lock-open">
-          <a href="#lock-open">
-            <div>
-              <span data-rvt-icon="lock-open"></span>
-            </div>
-            <div class="rvt-icons-demo__title">lock open</div>
-          </a>
-        </li>
-      
-        <li id="magnifying-glass">
-          <a href="#magnifying-glass">
-            <div>
-              <span data-rvt-icon="magnifying-glass"></span>
-            </div>
-            <div class="rvt-icons-demo__title">magnifying glass</div>
-          </a>
-        </li>
-      
-        <li id="map-pin">
-          <a href="#map-pin">
-            <div>
-              <span data-rvt-icon="map-pin"></span>
-            </div>
-            <div class="rvt-icons-demo__title">map pin</div>
-          </a>
-        </li>
-      
-        <li id="megaphone">
-          <a href="#megaphone">
-            <div>
-              <span data-rvt-icon="megaphone"></span>
-            </div>
-            <div class="rvt-icons-demo__title">megaphone</div>
-          </a>
-        </li>
-      
-        <li id="menu">
-          <a href="#menu">
-            <div>
-              <span data-rvt-icon="menu"></span>
-            </div>
-            <div class="rvt-icons-demo__title">menu</div>
-          </a>
-        </li>
-      
-        <li id="minus">
-          <a href="#minus">
-            <div>
-              <span data-rvt-icon="minus"></span>
-            </div>
-            <div class="rvt-icons-demo__title">minus</div>
-          </a>
-        </li>
-      
-        <li id="minus-circle">
-          <a href="#minus-circle">
-            <div>
-              <span data-rvt-icon="minus-circle"></span>
-            </div>
-            <div class="rvt-icons-demo__title">minus circle</div>
-          </a>
-        </li>
-      
-        <li id="note">
-          <a href="#note">
-            <div>
-              <span data-rvt-icon="note"></span>
-            </div>
-            <div class="rvt-icons-demo__title">note</div>
-          </a>
-        </li>
-      
-        <li id="ordered-list">
-          <a href="#ordered-list">
-            <div>
-              <span data-rvt-icon="ordered-list"></span>
-            </div>
-            <div class="rvt-icons-demo__title">ordered list</div>
-          </a>
-        </li>
-      
-        <li id="pause">
-          <a href="#pause">
-            <div>
-              <span data-rvt-icon="pause"></span>
-            </div>
-            <div class="rvt-icons-demo__title">pause</div>
-          </a>
-        </li>
-      
-        <li id="pencil">
-          <a href="#pencil">
-            <div>
-              <span data-rvt-icon="pencil"></span>
-            </div>
-            <div class="rvt-icons-demo__title">pencil</div>
-          </a>
-        </li>
-      
-        <li id="phone">
-          <a href="#phone">
-            <div>
-              <span data-rvt-icon="phone"></span>
-            </div>
-            <div class="rvt-icons-demo__title">phone</div>
-          </a>
-        </li>
-      
-        <li id="pin">
-          <a href="#pin">
-            <div>
-              <span data-rvt-icon="pin"></span>
-            </div>
-            <div class="rvt-icons-demo__title">pin</div>
-          </a>
-        </li>
-      
-        <li id="play">
-          <a href="#play">
-            <div>
-              <span data-rvt-icon="play"></span>
-            </div>
-            <div class="rvt-icons-demo__title">play</div>
-          </a>
-        </li>
-      
-        <li id="plus">
-          <a href="#plus">
-            <div>
-              <span data-rvt-icon="plus"></span>
-            </div>
-            <div class="rvt-icons-demo__title">plus</div>
-          </a>
-        </li>
-      
-        <li id="plus-circle">
-          <a href="#plus-circle">
-            <div>
-              <span data-rvt-icon="plus-circle"></span>
-            </div>
-            <div class="rvt-icons-demo__title">plus circle</div>
-          </a>
-        </li>
-      
-        <li id="printer">
-          <a href="#printer">
-            <div>
-              <span data-rvt-icon="printer"></span>
-            </div>
-            <div class="rvt-icons-demo__title">printer</div>
-          </a>
-        </li>
-      
-        <li id="question-mark">
-          <a href="#question-mark">
-            <div>
-              <span data-rvt-icon="question-mark"></span>
-            </div>
-            <div class="rvt-icons-demo__title">question mark</div>
-          </a>
-        </li>
-      
-        <li id="redo">
-          <a href="#redo">
-            <div>
-              <span data-rvt-icon="redo"></span>
-            </div>
-            <div class="rvt-icons-demo__title">redo</div>
-          </a>
-        </li>
-      
-        <li id="rss">
-          <a href="#rss">
-            <div>
-              <span data-rvt-icon="rss"></span>
-            </div>
-            <div class="rvt-icons-demo__title">rss</div>
-          </a>
-        </li>
-      
-        <li id="save">
-          <a href="#save">
-            <div>
-              <span data-rvt-icon="save"></span>
-            </div>
-            <div class="rvt-icons-demo__title">save</div>
-          </a>
-        </li>
-      
-        <li id="settings">
-          <a href="#settings">
-            <div>
-              <span data-rvt-icon="settings"></span>
-            </div>
-            <div class="rvt-icons-demo__title">settings</div>
-          </a>
-        </li>
-      
-        <li id="sidebyside">
-          <a href="#sidebyside">
-            <div>
-              <span data-rvt-icon="sidebyside"></span>
-            </div>
-            <div class="rvt-icons-demo__title">sidebyside</div>
-          </a>
-        </li>
-      
-        <li id="star">
-          <a href="#star">
-            <div>
-              <span data-rvt-icon="star"></span>
-            </div>
-            <div class="rvt-icons-demo__title">star</div>
-          </a>
-        </li>
-      
-        <li id="star-solid">
-          <a href="#star-solid">
-            <div>
-              <span data-rvt-icon="star-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">star solid</div>
-          </a>
-        </li>
-      
-        <li id="sync">
-          <a href="#sync">
-            <div>
-              <span data-rvt-icon="sync"></span>
-            </div>
-            <div class="rvt-icons-demo__title">sync</div>
-          </a>
-        </li>
-      
-        <li id="transfer">
-          <a href="#transfer">
-            <div>
-              <span data-rvt-icon="transfer"></span>
-            </div>
-            <div class="rvt-icons-demo__title">transfer</div>
-          </a>
-        </li>
-      
-        <li id="transfer-alternate">
-          <a href="#transfer-alternate">
-            <div>
-              <span data-rvt-icon="transfer-alternate"></span>
-            </div>
-            <div class="rvt-icons-demo__title">transfer alternate</div>
-          </a>
-        </li>
-      
-        <li id="trash">
-          <a href="#trash">
-            <div>
-              <span data-rvt-icon="trash"></span>
-            </div>
-            <div class="rvt-icons-demo__title">trash</div>
-          </a>
-        </li>
-      
-        <li id="undo">
-          <a href="#undo">
-            <div>
-              <span data-rvt-icon="undo"></span>
-            </div>
-            <div class="rvt-icons-demo__title">undo</div>
-          </a>
-        </li>
-      
-        <li id="upload">
-          <a href="#upload">
-            <div>
-              <span data-rvt-icon="upload"></span>
-            </div>
-            <div class="rvt-icons-demo__title">upload</div>
-          </a>
-        </li>
-      
-        <li id="user">
-          <a href="#user">
-            <div>
-              <span data-rvt-icon="user"></span>
-            </div>
-            <div class="rvt-icons-demo__title">user</div>
-          </a>
-        </li>
-      
-        <li id="user-add">
-          <a href="#user-add">
-            <div>
-              <span data-rvt-icon="user-add"></span>
-            </div>
-            <div class="rvt-icons-demo__title">user add</div>
-          </a>
-        </li>
-      
-        <li id="user-add-solid">
-          <a href="#user-add-solid">
-            <div>
-              <span data-rvt-icon="user-add-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">user add solid</div>
-          </a>
-        </li>
-      
-        <li id="user-remove">
-          <a href="#user-remove">
-            <div>
-              <span data-rvt-icon="user-remove"></span>
-            </div>
-            <div class="rvt-icons-demo__title">user remove</div>
-          </a>
-        </li>
-      
-        <li id="user-remove-solid">
-          <a href="#user-remove-solid">
-            <div>
-              <span data-rvt-icon="user-remove-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">user remove solid</div>
-          </a>
-        </li>
-      
-        <li id="user-solid">
-          <a href="#user-solid">
-            <div>
-              <span data-rvt-icon="user-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">user solid</div>
-          </a>
-        </li>
-      
-        <li id="users">
-          <a href="#users">
-            <div>
-              <span data-rvt-icon="users"></span>
-            </div>
-            <div class="rvt-icons-demo__title">users</div>
-          </a>
-        </li>
-      
-        <li id="users-group-solid">
-          <a href="#users-group-solid">
-            <div>
-              <span data-rvt-icon="users-group-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">users group solid</div>
-          </a>
-        </li>
-      
-        <li id="users-solid">
-          <a href="#users-solid">
-            <div>
-              <span data-rvt-icon="users-solid"></span>
-            </div>
-            <div class="rvt-icons-demo__title">users solid</div>
-          </a>
-        </li>
-      
-    </ul>
+    <div class="rvt-m-bottom-lg">
+      <a href="/">Rivet icons</a>
+      
+      <h1 class="rvt-ts-46 rvt-text-bold rvt-m-top-sm">heart</h1>
+      <span data-rvt-icon="heart"></span>
+      <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg">Export as CSS</h2>
+      
+      <pre><code class="ri-code-block">&lt;span data-rvt-icon=&quot;heart&quot;&gt;&lt;/span&gt;</code></pre>
+      
+      <pre><code class="ri-code-block">&lt;span class=&quot;rvt-icon rvt-icon--heart&quot;&gt;&lt;/span&gt;</code></pre>
+      <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg">Export as SVG</h2>
+      
+      <pre><code class="ri-code-block">&lt;svg class=&quot;rvt-icon&quot;&gt;
+  &lt;use href=&quot;#rvt-icon-heart&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+      <pre><code class="ri-code-block">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+  &lt;path fill=&quot;currentColor&quot; d=&quot;M8,14.52a1,1,0,0,1-.71-.3L1.38,8.33a4.29,4.29,0,0,1,0-6.07,4.3,4.3,0,0,1,6.07,0L8,2.79l.52-.53a4.3,4.3,0,0,1,6.07,0h0a4.23,4.23,0,0,1,1.26,3,4.21,4.21,0,0,1-1.26,3L8.68,14.22A1,1,0,0,1,8,14.52ZM4.42,3a2.34,2.34,0,0,0-1.63.67A2.31,2.31,0,0,0,2.12,5.3a2.29,2.29,0,0,0,.67,1.62L8,12.1l5.18-5.18a2.29,2.29,0,0,0,.67-1.62A2.29,2.29,0,0,0,9.92,3.67L8.68,4.91a1,1,0,0,1-1.41,0L6,3.67A2.33,2.33,0,0,0,4.42,3Z&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+      <a class="button button--secondary" download href="icons/rvt-icon-heart.svg">Download SVG<span class="rvt-sr-only">, heart icon</span></a>
+    </div>
     <hr>
-    <ul class="rvt-icons-demo rvt-p-top-xxl">
+    <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg">Icons</h2>
+    <ul class="ri-list rvt-m-top-sm">
       
-        <li id="alarm">
-          <a href="#alarm">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-alarm"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">alarm</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=alarm">
+            <span data-rvt-icon="alarm"></span>
+            <span class="rvt-p-left-xs">alarm</span>
           </a>
         </li>
       
-        <li id="arrow-down">
-          <a href="#arrow-down">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-arrow-down"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">arrow down</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=arrow-down">
+            <span data-rvt-icon="arrow-down"></span>
+            <span class="rvt-p-left-xs">arrow-down</span>
           </a>
         </li>
       
-        <li id="arrow-left">
-          <a href="#arrow-left">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-arrow-left"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">arrow left</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=arrow-left">
+            <span data-rvt-icon="arrow-left"></span>
+            <span class="rvt-p-left-xs">arrow-left</span>
           </a>
         </li>
       
-        <li id="arrow-right">
-          <a href="#arrow-right">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-arrow-right"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">arrow right</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=arrow-right">
+            <span data-rvt-icon="arrow-right"></span>
+            <span class="rvt-p-left-xs">arrow-right</span>
           </a>
         </li>
       
-        <li id="arrow-up">
-          <a href="#arrow-up">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-arrow-up"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">arrow up</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=arrow-up">
+            <span data-rvt-icon="arrow-up"></span>
+            <span class="rvt-p-left-xs">arrow-up</span>
           </a>
         </li>
       
-        <li id="audio-off">
-          <a href="#audio-off">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-audio-off"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">audio off</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=audio-off">
+            <span data-rvt-icon="audio-off"></span>
+            <span class="rvt-p-left-xs">audio-off</span>
           </a>
         </li>
       
-        <li id="audio-on">
-          <a href="#audio-on">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-audio-on"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">audio on</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=audio-on">
+            <span data-rvt-icon="audio-on"></span>
+            <span class="rvt-p-left-xs">audio-on</span>
           </a>
         </li>
       
-        <li id="ban">
-          <a href="#ban">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-ban"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">ban</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=ban">
+            <span data-rvt-icon="ban"></span>
+            <span class="rvt-p-left-xs">ban</span>
           </a>
         </li>
       
-        <li id="bell">
-          <a href="#bell">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-bell"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">bell</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=bell">
+            <span data-rvt-icon="bell"></span>
+            <span class="rvt-p-left-xs">bell</span>
           </a>
         </li>
       
-        <li id="building">
-          <a href="#building">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-building"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">building</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=building">
+            <span data-rvt-icon="building"></span>
+            <span class="rvt-p-left-xs">building</span>
           </a>
         </li>
       
-        <li id="calendar">
-          <a href="#calendar">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-calendar"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">calendar</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=calendar">
+            <span data-rvt-icon="calendar"></span>
+            <span class="rvt-p-left-xs">calendar</span>
           </a>
         </li>
       
-        <li id="chat">
-          <a href="#chat">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-chat"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">chat</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=chat">
+            <span data-rvt-icon="chat"></span>
+            <span class="rvt-p-left-xs">chat</span>
           </a>
         </li>
       
-        <li id="check">
-          <a href="#check">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-check"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">check</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=check">
+            <span data-rvt-icon="check"></span>
+            <span class="rvt-p-left-xs">check</span>
           </a>
         </li>
       
-        <li id="check-all">
-          <a href="#check-all">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-check-all"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">check all</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=check-all">
+            <span data-rvt-icon="check-all"></span>
+            <span class="rvt-p-left-xs">check-all</span>
           </a>
         </li>
       
-        <li id="check-circle">
-          <a href="#check-circle">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-check-circle"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">check circle</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=check-circle">
+            <span data-rvt-icon="check-circle"></span>
+            <span class="rvt-p-left-xs">check-circle</span>
           </a>
         </li>
       
-        <li id="check-circle-breakout">
-          <a href="#check-circle-breakout">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-check-circle-breakout"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">check circle breakout</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=check-circle-breakout">
+            <span data-rvt-icon="check-circle-breakout"></span>
+            <span class="rvt-p-left-xs">check-circle-breakout</span>
           </a>
         </li>
       
-        <li id="chevron-down">
-          <a href="#chevron-down">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-chevron-down"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">chevron down</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=chevron-down">
+            <span data-rvt-icon="chevron-down"></span>
+            <span class="rvt-p-left-xs">chevron-down</span>
           </a>
         </li>
       
-        <li id="chevron-left">
-          <a href="#chevron-left">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-chevron-left"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">chevron left</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=chevron-left">
+            <span data-rvt-icon="chevron-left"></span>
+            <span class="rvt-p-left-xs">chevron-left</span>
           </a>
         </li>
       
-        <li id="chevron-right">
-          <a href="#chevron-right">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-chevron-right"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">chevron right</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=chevron-right">
+            <span data-rvt-icon="chevron-right"></span>
+            <span class="rvt-p-left-xs">chevron-right</span>
           </a>
         </li>
       
-        <li id="chevron-up">
-          <a href="#chevron-up">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-chevron-up"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">chevron up</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=chevron-up">
+            <span data-rvt-icon="chevron-up"></span>
+            <span class="rvt-p-left-xs">chevron-up</span>
           </a>
         </li>
       
-        <li id="chevrons-left">
-          <a href="#chevrons-left">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-chevrons-left"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">chevrons left</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=chevrons-left">
+            <span data-rvt-icon="chevrons-left"></span>
+            <span class="rvt-p-left-xs">chevrons-left</span>
           </a>
         </li>
       
-        <li id="chevrons-right">
-          <a href="#chevrons-right">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-chevrons-right"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">chevrons right</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=chevrons-right">
+            <span data-rvt-icon="chevrons-right"></span>
+            <span class="rvt-p-left-xs">chevrons-right</span>
           </a>
         </li>
       
-        <li id="circle">
-          <a href="#circle">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-circle"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">circle</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=circle">
+            <span data-rvt-icon="circle"></span>
+            <span class="rvt-p-left-xs">circle</span>
           </a>
         </li>
       
-        <li id="circle-solid">
-          <a href="#circle-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-circle-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">circle solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=circle-solid">
+            <span data-rvt-icon="circle-solid"></span>
+            <span class="rvt-p-left-xs">circle-solid</span>
           </a>
         </li>
       
-        <li id="clipboard">
-          <a href="#clipboard">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-clipboard"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">clipboard</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=clipboard">
+            <span data-rvt-icon="clipboard"></span>
+            <span class="rvt-p-left-xs">clipboard</span>
           </a>
         </li>
       
-        <li id="clock">
-          <a href="#clock">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-clock"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">clock</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=clock">
+            <span data-rvt-icon="clock"></span>
+            <span class="rvt-p-left-xs">clock</span>
           </a>
         </li>
       
-        <li id="close">
-          <a href="#close">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-close"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">close</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=close">
+            <span data-rvt-icon="close"></span>
+            <span class="rvt-p-left-xs">close</span>
           </a>
         </li>
       
-        <li id="close-circle">
-          <a href="#close-circle">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-close-circle"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">close circle</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=close-circle">
+            <span data-rvt-icon="close-circle"></span>
+            <span class="rvt-p-left-xs">close-circle</span>
           </a>
         </li>
       
-        <li id="close-circle-solid">
-          <a href="#close-circle-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-close-circle-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">close circle solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=close-circle-solid">
+            <span data-rvt-icon="close-circle-solid"></span>
+            <span class="rvt-p-left-xs">close-circle-solid</span>
           </a>
         </li>
       
-        <li id="code">
-          <a href="#code">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-code"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">code</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=code">
+            <span data-rvt-icon="code"></span>
+            <span class="rvt-p-left-xs">code</span>
           </a>
         </li>
       
-        <li id="copy">
-          <a href="#copy">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-copy"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">copy</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=copy">
+            <span data-rvt-icon="copy"></span>
+            <span class="rvt-p-left-xs">copy</span>
           </a>
         </li>
       
-        <li id="credit-card">
-          <a href="#credit-card">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-credit-card"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">credit card</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=credit-card">
+            <span data-rvt-icon="credit-card"></span>
+            <span class="rvt-p-left-xs">credit-card</span>
           </a>
         </li>
       
-        <li id="data">
-          <a href="#data">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-data"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">data</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=data">
+            <span data-rvt-icon="data"></span>
+            <span class="rvt-p-left-xs">data</span>
           </a>
         </li>
       
-        <li id="download">
-          <a href="#download">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-download"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">download</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=download">
+            <span data-rvt-icon="download"></span>
+            <span class="rvt-p-left-xs">download</span>
           </a>
         </li>
       
-        <li id="ellipsis">
-          <a href="#ellipsis">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-ellipsis"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">ellipsis</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=ellipsis">
+            <span data-rvt-icon="ellipsis"></span>
+            <span class="rvt-p-left-xs">ellipsis</span>
           </a>
         </li>
       
-        <li id="ellipsis-vertical">
-          <a href="#ellipsis-vertical">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-ellipsis-vertical"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">ellipsis vertical</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=ellipsis-vertical">
+            <span data-rvt-icon="ellipsis-vertical"></span>
+            <span class="rvt-p-left-xs">ellipsis-vertical</span>
           </a>
         </li>
       
-        <li id="envelope">
-          <a href="#envelope">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-envelope"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">envelope</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=envelope">
+            <span data-rvt-icon="envelope"></span>
+            <span class="rvt-p-left-xs">envelope</span>
           </a>
         </li>
       
-        <li id="exclamation">
-          <a href="#exclamation">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-exclamation"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">exclamation</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=exclamation">
+            <span data-rvt-icon="exclamation"></span>
+            <span class="rvt-p-left-xs">exclamation</span>
           </a>
         </li>
       
-        <li id="expand">
-          <a href="#expand">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-expand"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">expand</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=expand">
+            <span data-rvt-icon="expand"></span>
+            <span class="rvt-p-left-xs">expand</span>
           </a>
         </li>
       
-        <li id="eye">
-          <a href="#eye">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-eye"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">eye</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=eye">
+            <span data-rvt-icon="eye"></span>
+            <span class="rvt-p-left-xs">eye</span>
           </a>
         </li>
       
-        <li id="file">
-          <a href="#file">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-file"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">file</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=file">
+            <span data-rvt-icon="file"></span>
+            <span class="rvt-p-left-xs">file</span>
           </a>
         </li>
       
-        <li id="filter">
-          <a href="#filter">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-filter"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">filter</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=filter">
+            <span data-rvt-icon="filter"></span>
+            <span class="rvt-p-left-xs">filter</span>
           </a>
         </li>
       
-        <li id="flag">
-          <a href="#flag">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-flag"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">flag</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=flag">
+            <span data-rvt-icon="flag"></span>
+            <span class="rvt-p-left-xs">flag</span>
           </a>
         </li>
       
-        <li id="gear">
-          <a href="#gear">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-gear"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">gear</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=gear">
+            <span data-rvt-icon="gear"></span>
+            <span class="rvt-p-left-xs">gear</span>
           </a>
         </li>
       
-        <li id="gears">
-          <a href="#gears">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-gears"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">gears</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=gears">
+            <span data-rvt-icon="gears"></span>
+            <span class="rvt-p-left-xs">gears</span>
           </a>
         </li>
       
-        <li id="grid">
-          <a href="#grid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-grid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">grid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=grid">
+            <span data-rvt-icon="grid"></span>
+            <span class="rvt-p-left-xs">grid</span>
           </a>
         </li>
       
-        <li id="heart">
-          <a href="#heart">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-heart"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">heart</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=heart">
+            <span data-rvt-icon="heart"></span>
+            <span class="rvt-p-left-xs">heart</span>
           </a>
         </li>
       
-        <li id="heart-solid">
-          <a href="#heart-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-heart-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">heart solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=heart-solid">
+            <span data-rvt-icon="heart-solid"></span>
+            <span class="rvt-p-left-xs">heart-solid</span>
           </a>
         </li>
       
-        <li id="home">
-          <a href="#home">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-home"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">home</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=home">
+            <span data-rvt-icon="home"></span>
+            <span class="rvt-p-left-xs">home</span>
           </a>
         </li>
       
-        <li id="image">
-          <a href="#image">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-image"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">image</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=image">
+            <span data-rvt-icon="image"></span>
+            <span class="rvt-p-left-xs">image</span>
           </a>
         </li>
       
-        <li id="info-circle">
-          <a href="#info-circle">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-info-circle"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">info circle</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=info-circle">
+            <span data-rvt-icon="info-circle"></span>
+            <span class="rvt-p-left-xs">info-circle</span>
           </a>
         </li>
       
-        <li id="lightning">
-          <a href="#lightning">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-lightning"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">lightning</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=lightning">
+            <span data-rvt-icon="lightning"></span>
+            <span class="rvt-p-left-xs">lightning</span>
           </a>
         </li>
       
-        <li id="lightning-box">
-          <a href="#lightning-box">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-lightning-box"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">lightning box</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=lightning-box">
+            <span data-rvt-icon="lightning-box"></span>
+            <span class="rvt-p-left-xs">lightning-box</span>
           </a>
         </li>
       
-        <li id="link">
-          <a href="#link">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-link"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">link</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=link">
+            <span data-rvt-icon="link"></span>
+            <span class="rvt-p-left-xs">link</span>
           </a>
         </li>
       
-        <li id="link-external">
-          <a href="#link-external">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-link-external"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">link external</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=link-external">
+            <span data-rvt-icon="link-external"></span>
+            <span class="rvt-p-left-xs">link-external</span>
           </a>
         </li>
       
-        <li id="list">
-          <a href="#list">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-list"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">list</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=list">
+            <span data-rvt-icon="list"></span>
+            <span class="rvt-p-left-xs">list</span>
           </a>
         </li>
       
-        <li id="lock-closed">
-          <a href="#lock-closed">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-lock-closed"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">lock closed</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=lock-closed">
+            <span data-rvt-icon="lock-closed"></span>
+            <span class="rvt-p-left-xs">lock-closed</span>
           </a>
         </li>
       
-        <li id="lock-open">
-          <a href="#lock-open">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-lock-open"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">lock open</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=lock-open">
+            <span data-rvt-icon="lock-open"></span>
+            <span class="rvt-p-left-xs">lock-open</span>
           </a>
         </li>
       
-        <li id="magnifying-glass">
-          <a href="#magnifying-glass">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-magnifying-glass"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">magnifying glass</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=magnifying-glass">
+            <span data-rvt-icon="magnifying-glass"></span>
+            <span class="rvt-p-left-xs">magnifying-glass</span>
           </a>
         </li>
       
-        <li id="map-pin">
-          <a href="#map-pin">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-map-pin"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">map pin</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=map-pin">
+            <span data-rvt-icon="map-pin"></span>
+            <span class="rvt-p-left-xs">map-pin</span>
           </a>
         </li>
       
-        <li id="megaphone">
-          <a href="#megaphone">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-megaphone"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">megaphone</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=megaphone">
+            <span data-rvt-icon="megaphone"></span>
+            <span class="rvt-p-left-xs">megaphone</span>
           </a>
         </li>
       
-        <li id="menu">
-          <a href="#menu">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-menu"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">menu</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=menu">
+            <span data-rvt-icon="menu"></span>
+            <span class="rvt-p-left-xs">menu</span>
           </a>
         </li>
       
-        <li id="minus">
-          <a href="#minus">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-minus"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">minus</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=minus">
+            <span data-rvt-icon="minus"></span>
+            <span class="rvt-p-left-xs">minus</span>
           </a>
         </li>
       
-        <li id="minus-circle">
-          <a href="#minus-circle">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-minus-circle"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">minus circle</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=minus-circle">
+            <span data-rvt-icon="minus-circle"></span>
+            <span class="rvt-p-left-xs">minus-circle</span>
           </a>
         </li>
       
-        <li id="note">
-          <a href="#note">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-note"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">note</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=note">
+            <span data-rvt-icon="note"></span>
+            <span class="rvt-p-left-xs">note</span>
           </a>
         </li>
       
-        <li id="ordered-list">
-          <a href="#ordered-list">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-ordered-list"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">ordered list</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=ordered-list">
+            <span data-rvt-icon="ordered-list"></span>
+            <span class="rvt-p-left-xs">ordered-list</span>
           </a>
         </li>
       
-        <li id="pause">
-          <a href="#pause">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-pause"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">pause</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=pause">
+            <span data-rvt-icon="pause"></span>
+            <span class="rvt-p-left-xs">pause</span>
           </a>
         </li>
       
-        <li id="pencil">
-          <a href="#pencil">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-pencil"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">pencil</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=pencil">
+            <span data-rvt-icon="pencil"></span>
+            <span class="rvt-p-left-xs">pencil</span>
           </a>
         </li>
       
-        <li id="phone">
-          <a href="#phone">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-phone"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">phone</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=phone">
+            <span data-rvt-icon="phone"></span>
+            <span class="rvt-p-left-xs">phone</span>
           </a>
         </li>
       
-        <li id="pin">
-          <a href="#pin">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-pin"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">pin</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=pin">
+            <span data-rvt-icon="pin"></span>
+            <span class="rvt-p-left-xs">pin</span>
           </a>
         </li>
       
-        <li id="play">
-          <a href="#play">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-play"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">play</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=play">
+            <span data-rvt-icon="play"></span>
+            <span class="rvt-p-left-xs">play</span>
           </a>
         </li>
       
-        <li id="plus">
-          <a href="#plus">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-plus"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">plus</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=plus">
+            <span data-rvt-icon="plus"></span>
+            <span class="rvt-p-left-xs">plus</span>
           </a>
         </li>
       
-        <li id="plus-circle">
-          <a href="#plus-circle">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-plus-circle"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">plus circle</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=plus-circle">
+            <span data-rvt-icon="plus-circle"></span>
+            <span class="rvt-p-left-xs">plus-circle</span>
           </a>
         </li>
       
-        <li id="printer">
-          <a href="#printer">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-printer"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">printer</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=printer">
+            <span data-rvt-icon="printer"></span>
+            <span class="rvt-p-left-xs">printer</span>
           </a>
         </li>
       
-        <li id="question-mark">
-          <a href="#question-mark">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-question-mark"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">question mark</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=question-mark">
+            <span data-rvt-icon="question-mark"></span>
+            <span class="rvt-p-left-xs">question-mark</span>
           </a>
         </li>
       
-        <li id="redo">
-          <a href="#redo">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-redo"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">redo</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=redo">
+            <span data-rvt-icon="redo"></span>
+            <span class="rvt-p-left-xs">redo</span>
           </a>
         </li>
       
-        <li id="rss">
-          <a href="#rss">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-rss"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">rss</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=rss">
+            <span data-rvt-icon="rss"></span>
+            <span class="rvt-p-left-xs">rss</span>
           </a>
         </li>
       
-        <li id="save">
-          <a href="#save">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-save"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">save</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=save">
+            <span data-rvt-icon="save"></span>
+            <span class="rvt-p-left-xs">save</span>
           </a>
         </li>
       
-        <li id="settings">
-          <a href="#settings">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-settings"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">settings</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=settings">
+            <span data-rvt-icon="settings"></span>
+            <span class="rvt-p-left-xs">settings</span>
           </a>
         </li>
       
-        <li id="sidebyside">
-          <a href="#sidebyside">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-sidebyside"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">sidebyside</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=sidebyside">
+            <span data-rvt-icon="sidebyside"></span>
+            <span class="rvt-p-left-xs">sidebyside</span>
           </a>
         </li>
       
-        <li id="star">
-          <a href="#star">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-star"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">star</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=star">
+            <span data-rvt-icon="star"></span>
+            <span class="rvt-p-left-xs">star</span>
           </a>
         </li>
       
-        <li id="star-solid">
-          <a href="#star-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-star-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">star solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=star-solid">
+            <span data-rvt-icon="star-solid"></span>
+            <span class="rvt-p-left-xs">star-solid</span>
           </a>
         </li>
       
-        <li id="sync">
-          <a href="#sync">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-sync"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">sync</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=sync">
+            <span data-rvt-icon="sync"></span>
+            <span class="rvt-p-left-xs">sync</span>
           </a>
         </li>
       
-        <li id="transfer">
-          <a href="#transfer">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-transfer"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">transfer</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=transfer">
+            <span data-rvt-icon="transfer"></span>
+            <span class="rvt-p-left-xs">transfer</span>
           </a>
         </li>
       
-        <li id="transfer-alternate">
-          <a href="#transfer-alternate">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-transfer-alternate"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">transfer alternate</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=transfer-alternate">
+            <span data-rvt-icon="transfer-alternate"></span>
+            <span class="rvt-p-left-xs">transfer-alternate</span>
           </a>
         </li>
       
-        <li id="trash">
-          <a href="#trash">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-trash"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">trash</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=trash">
+            <span data-rvt-icon="trash"></span>
+            <span class="rvt-p-left-xs">trash</span>
           </a>
         </li>
       
-        <li id="undo">
-          <a href="#undo">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-undo"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">undo</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=undo">
+            <span data-rvt-icon="undo"></span>
+            <span class="rvt-p-left-xs">undo</span>
           </a>
         </li>
       
-        <li id="upload">
-          <a href="#upload">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-upload"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">upload</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=upload">
+            <span data-rvt-icon="upload"></span>
+            <span class="rvt-p-left-xs">upload</span>
           </a>
         </li>
       
-        <li id="user">
-          <a href="#user">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-user"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">user</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=user">
+            <span data-rvt-icon="user"></span>
+            <span class="rvt-p-left-xs">user</span>
           </a>
         </li>
       
-        <li id="user-add">
-          <a href="#user-add">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-user-add"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">user add</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=user-add">
+            <span data-rvt-icon="user-add"></span>
+            <span class="rvt-p-left-xs">user-add</span>
           </a>
         </li>
       
-        <li id="user-add-solid">
-          <a href="#user-add-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-user-add-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">user add solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=user-add-solid">
+            <span data-rvt-icon="user-add-solid"></span>
+            <span class="rvt-p-left-xs">user-add-solid</span>
           </a>
         </li>
       
-        <li id="user-remove">
-          <a href="#user-remove">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-user-remove"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">user remove</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=user-remove">
+            <span data-rvt-icon="user-remove"></span>
+            <span class="rvt-p-left-xs">user-remove</span>
           </a>
         </li>
       
-        <li id="user-remove-solid">
-          <a href="#user-remove-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-user-remove-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">user remove solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=user-remove-solid">
+            <span data-rvt-icon="user-remove-solid"></span>
+            <span class="rvt-p-left-xs">user-remove-solid</span>
           </a>
         </li>
       
-        <li id="user-solid">
-          <a href="#user-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-user-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">user solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=user-solid">
+            <span data-rvt-icon="user-solid"></span>
+            <span class="rvt-p-left-xs">user-solid</span>
           </a>
         </li>
       
-        <li id="users">
-          <a href="#users">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-users"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">users</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=users">
+            <span data-rvt-icon="users"></span>
+            <span class="rvt-p-left-xs">users</span>
           </a>
         </li>
       
-        <li id="users-group-solid">
-          <a href="#users-group-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-users-group-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">users group solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=users-group-solid">
+            <span data-rvt-icon="users-group-solid"></span>
+            <span class="rvt-p-left-xs">users-group-solid</span>
           </a>
         </li>
       
-        <li id="users-solid">
-          <a href="#users-solid">
-            <svg class="rvt-icon">
-              <use xlink:href="./rivet-icons.svg#rvt-icon-users-solid"></use>
-            </svg>
-            <div class="rvt-icons-demo__title">users solid</div>
+        <li class="ri-list__item">
+          <a class="ri-list__link" href="?icon=users-solid">
+            <span data-rvt-icon="users-solid"></span>
+            <span class="rvt-p-left-xs">users-solid</span>
           </a>
         </li>
       
