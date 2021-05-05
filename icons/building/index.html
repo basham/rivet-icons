@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.8.1/rivet.min.css">
   <style>
   :root {
+    --rvt-color-black: #000000;
+    --rvt-color-black-5: #fafafa;
+    --rvt-color-black-90: #444444;
+    --rvt-color-blue-60: #006298;
+    --rvt-color-white: #ffffff;
   }
 
   body {
@@ -37,7 +42,7 @@
   }
 
   .ri-list__link:hover {
-    background-color: #f7f7f7;
+    background-color: var(--rvt-color-black-5);
   }
 
   .ri-code-block {
@@ -48,30 +53,14 @@
     padding: 1rem;
   }
 
-  .rvt-demo-switcher {
-    position: fixed;
-    right: 2rem;
-    top: 2rem;
-    background-color: #006298;
-    -webkit-appearance: none;
+  .ri-icon--interactive {
+    color: var(--rvt-color-blue-60);
   }
 
-  .inverted {
-    background-color: #222222;
-    color: #ffffff;
-  }
-
-  .inverted .rvt-icons-demo__title {
-    background-color: #333333;
-    color: #ffffff;
-  }
-
-  svg.rvt-icon {
-    display: block;
-    height: 1rem;
-    margin: 0 auto;
-    padding: 0;
-    width: 1rem;
+  .ri-icon--inverted {
+    border-color: var(--rvt-color-black);
+    background-color: var(--rvt-color-black-90);
+    color: var(--rvt-color-white);
   }
 </style>
 </head>
@@ -681,7 +670,7 @@ rvt-icon[icon="users-solid"] {
 <script>
 const prefix = 'rvt-icon'
 
-window.customElements.define(prefix, class RivetIcon extends HTMLElement {
+window.customElements.define(prefix, class RivetIconElement extends HTMLElement {
   static get observedAttributes() {
     return ['icon', 'icons'];
   }
@@ -717,24 +706,20 @@ window.customElements.define(prefix, class RivetIcon extends HTMLElement {
 <div class="rvt-m-bottom-lg">
   <a href="../../">Rivet icons</a>
 
-  <h1 class="rvt-ts-46 rvt-text-bold rvt-m-top-xs">building</h1>
-  <rvt-icon icon="building"></rvt-icon>
+  <h1 class="rvt-ts-46 rvt-text-bold rvt-m-top-sm rvt-lh-title">building</h1>
 
-  <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg">Option 1</h2>
-  <p>Use the custom element. This is essentially a shorthand for Option 2.</p>
+  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Icon style samples</h2>
+  <div class="rvt-flex rvt-flex-wrap rvt-m-top-sm">
+    <rvt-icon icon="building" class="rvt-p-all-sm rvt-box rvt-m-right-sm"></rvt-icon>
+    <rvt-icon icon="building" class="rvt-p-all-sm rvt-box rvt-m-right-sm ri-icon--interactive"></rvt-icon>
+    <rvt-icon icon="building" class="rvt-p-all-sm rvt-box ri-icon--inverted"></rvt-icon>
+  </div>
+
+  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Option 1:</span> Custom element</h2>
   
   <pre><code class="ri-code-block">&lt;rvt-icon icon=&quot;building&quot;&gt;&lt;/rvt-icon&gt;</code></pre>
 
-  <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg">Option 2</h2>
-  
-  <pre><code class="ri-code-block">&lt;span class=&quot;rvt-icon rvt-icon--building&quot;&gt;
-  &lt;svg&gt;
-    &lt;use href=&quot;#rvt-icon&quot;&gt;&lt;/use&gt;
-  &lt;/svg&gt;
-&lt;/span&gt;</code></pre>
-
-  <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg">Option 3</h2>
-  <p></p>
+  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Option 2:</span> SVG symbols</h2>
   
   <pre><code class="ri-code-block">&lt;span class=&quot;rvt-icon&quot;&gt;
   &lt;svg&gt;
@@ -742,8 +727,7 @@ window.customElements.define(prefix, class RivetIcon extends HTMLElement {
   &lt;/svg&gt;
 &lt;/span&gt;</code></pre>
 
-  <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg">Option 4</h2>
-  <p>Copy or download the SVG.</p>
+  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Option 3:</span> Copy or download</h2>
   <pre><code class="ri-code-block">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot;&gt;
   &lt;g fill=&quot;currentColor&quot;&gt;
     &lt;path d=&quot;M15,14H14V1a1,1,0,0,0-1-1H3A1,1,0,0,0,2,1V14H1a1,1,0,0,0,0,2H15a1,1,0,0,0,0-2ZM9,14V13a1,1,0,0,0-2,0v1H4V2h8V14Z&quot;/&gt;
@@ -1444,24 +1428,5 @@ window.customElements.define(prefix, class RivetIcon extends HTMLElement {
 </ul>
 
   </div>
-  <button class="rvt-demo-switcher rvt-button" id="switcher-button">
-  <span class="rvt-sr-only">Invert colors</span>
-  <svg class="rvt-icon">
-    <use xlink:href="./rivet-icons.svg#rvt-icon-transfer"></use>
-  </svg>
-</button>
-  <script src="https://cdn.jsdelivr.net/npm/svg4everybody@2.1.9/dist/svg4everybody.min.js"></script>
-<script>
-  // Toggles .inverted class on the body element
-  (function () {
-    const toggle = document.getElementById('switcher-button');
-
-    const handleClick = () => {
-      document.body.classList.toggle('inverted');
-    }
-
-    toggle.addEventListener('click', handleClick, false);
-  })();
-</script>
 </body>
 </html>
