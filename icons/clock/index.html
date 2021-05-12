@@ -4,44 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>clock | Rivet icons</title>
-  <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.8.1/rivet.min.css">
+  <title>clock | Rivet Icons</title>
+  <link rel="stylesheet" href="https://unpkg.com/rivet-core@2.0.0-alpha.4/css/rivet.min.css">
   <style>:root {
-  --rvt-color-black: #000000;
+  --rvt-border: calc(1rem/16) solid var(--rvt-color-black-10);
+  --rvt-color-black: #333333;
   --rvt-color-black-5: #fafafa;
+  --rvt-color-black-10: #eeeeee;
   --rvt-color-black-90: #444444;
   --rvt-color-blue-60: #006298;
   --rvt-color-white: #ffffff;
 }
 
-.docs-list {
+.docs-content {
+  max-width: 40rem;
+}
+
+.docs-nav {
+  background-color: var(--rvt-color-black-5);
+  border-top: var(--rvt-border);
+}
+
+.docs-nav__list {
   display: grid;
+  gap: 0.25rem;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.docs-list__item {
+.docs-nav__item {
   margin: 0;
   padding: 0;
 }
 
-.docs-list__link {
-  border-radius: 0.5rem;
+.docs-nav__item[aria-current] .docs-nav__link {
+  background-color: var(--rvt-color-black-90);
+  color: var(--rvt-color-white);
+}
+
+.docs-nav__link {
+  border-radius: 0.25rem;
   color: inherit;
   display: flex;
-  padding: 1rem;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
-.docs-list__link:hover {
-  background-color: var(--rvt-color-black-5);
+.docs-nav__link:hover {
+  background-color: var(--rvt-color-black-10);
+  color: var(--rvt-color-blue-60);
 }
 
 .docs-code-block {
+  background-color: var(--rvt-color-black-5);
+  border: var(--rvt-border);
+  border-radius: 0.25rem;
+  margin: 0;
+}
+
+.docs-code-block > code {
   color: inherit;
   display: block;
+  font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
   font-size: 1rem;
   overflow-x: auto;
   padding: 1rem;
@@ -56,6 +82,22 @@
   background-color: var(--rvt-color-black-90);
   color: var(--rvt-color-white);
 }
+
+.docs-copy {
+  position: relative;
+}
+
+.docs-copy__alert {
+  background-color: var(--rvt-color-black);
+  border-radius: 0.25rem;
+  color: var(--rvt-color-white);
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0 0.5rem;
+  position: absolute;
+  top: 1.5rem;
+  user-select: none;
+}
 </style>
 </head>
 <body>
@@ -66,8 +108,9 @@ rvt-icon {
   display: inline-flex;
 }
 
-.rvt-icon svg,
-rvt-icon svg {
+.rvt-icon > svg,
+rvt-icon > svg,
+rvt-icon:not(:defined)::before {
   height: 1rem;
   width: 1rem;
 }
@@ -75,8 +118,6 @@ rvt-icon svg {
 rvt-icon:not(:defined)::before {
   content: '';
   display: block;
-  height: 1rem;
-  width: 1rem;
 }
 </style>
 <script type="module">
@@ -137,727 +178,963 @@ window.customElements.define(namespace, RivetIconElement)
 
 </script>
 
-  <div class="rvt-container rvt-container--junior rvt-container--center rvt-p-tb-md">
-    
-<div class="rvt-m-bottom-lg">
-  <a href="../../">Rivet icons</a>
-
-  <h1 class="rvt-ts-46 rvt-text-bold rvt-m-top-sm rvt-lh-title">clock</h1>
-
-  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Icon style samples</h2>
-  <div class="rvt-flex rvt-flex-wrap rvt-m-top-sm">
-    <rvt-icon name="clock" class="rvt-p-all-sm rvt-box rvt-m-right-sm"></rvt-icon>
-    <rvt-icon name="clock" class="rvt-p-all-sm rvt-box rvt-m-right-sm docs-sample-colored"></rvt-icon>
-    <rvt-icon name="clock" class="rvt-p-all-sm rvt-box docs-sample-dark"></rvt-icon>
+  <header class="rvt-header-wrapper">
+  <a class="rvt-header-wrapper__skip-link" href="#main-content">Skip to main content</a>
+  <div class="rvt-header-global">
+    <div class="rvt-container-xl">
+      <div class="rvt-header-global__inner">
+        <div class="rvt-header-global__logo-slot">
+          <a class="rvt-lockup" href="../../">
+            <div class="rvt-lockup__tab">
+              <svg class="rvt-lockup__trident" viewBox="0 0 28 34">
+                <path d="M-3.34344e-05 4.70897H8.83308V7.174H7.1897V21.1426H10.6134V2.72321H8.83308V0.121224H18.214V2.65476H16.2283V21.1426H19.7889V7.174H18.214V4.64047H27.0471V7.174H25.0614V23.6761L21.7746 26.8944H16.2967V30.455H18.214V33.8787H8.76463V30.592H10.6819V26.8259H5.20403L1.91726 23.6077V7.174H-3.34344e-05V4.70897Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="rvt-lockup__body">
+              <span class="rvt-lockup__title">Rivet Icons</span>
+              <span class="rvt-lockup__subtitle">Indiana University</span>
+            </div>
+          </a>
+        </div>
+        <div class="rvt-header-global__controls">
+          <a href="https://github.com/indiana-university/rivet-icons">Documentation</a>
+        </div>
+      </div>
+    </div>
   </div>
+</header>
 
-  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Option 1:</span> Custom element</h2>
-  
-  <pre><code class="docs-code-block">&lt;rvt-icon name=&quot;clock&quot;&gt;&lt;/rvt-icon&gt;</code></pre>
+  <main id="main-content">
+    <div class="rvt-container-xl rvt-p-top-lg rvt-p-bottom-md">
+      <div class="docs-content">
+        
+<h1 class="rvt-ts-xl rvt-text-bold rvt-lh-title">clock</h1>
 
-  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Option 2:</span> SVG symbols</h2>
-  
-  <pre><code class="docs-code-block">&lt;span class=&quot;rvt-icon&quot;&gt;
-  &lt;svg&gt;
-    &lt;use href=&quot;#rvt-icon-clock&quot;&gt;&lt;/use&gt;
-  &lt;/svg&gt;
-&lt;/span&gt;</code></pre>
-
-  <h2 class="rvt-ts-sm rvt-m-top-lg"><span class="rvt-text-bold">Option 3:</span> Copy or download</h2>
-  <pre><code class="docs-code-block">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot;&gt;
-  &lt;g fill=&quot;currentColor&quot;&gt;
-    &lt;path d=&quot;M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z&quot;/&gt;
-    &lt;path d=&quot;M11.55,9.17,9,7.46V4A1,1,0,0,0,7,4V8a.94.94,0,0,0,0,.09,1,1,0,0,0,.11.37,1,1,0,0,0,.1.16,1,1,0,0,0,.14.14l.07.07,3,2a1,1,0,1,0,1.11-1.66Z&quot;/&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</code></pre>
-  <a class="button button--secondary" download href="../../icons/rvt-icon-clock.svg">Download SVG<span class="rvt-sr-only">, clock icon</span></a>
+<h2 class="rvt-ts-sm rvt-m-top-md rvt-text-bold">Icon style samples</h2>
+<div class="rvt-flex rvt-flex-wrap rvt-m-top-sm">
+  <rvt-icon name="clock" class="rvt-p-all-sm rvt-box rvt-m-right-sm"></rvt-icon>
+  <rvt-icon name="clock" class="rvt-p-all-sm rvt-box rvt-m-right-sm docs-sample-colored"></rvt-icon>
+  <rvt-icon name="clock" class="rvt-p-all-sm rvt-box docs-sample-dark"></rvt-icon>
 </div>
 
-    <h2 class="rvt-ts-sm rvt-text-bold rvt-m-top-lg rvt-p-top-lg rvt-border-top">Icons</h2>
-<ul class="docs-list rvt-m-top-sm">
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/alarm/">
-        <rvt-icon name="alarm" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>alarm</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/arrow-down/">
-        <rvt-icon name="arrow-down" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>arrow-down</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/arrow-left/">
-        <rvt-icon name="arrow-left" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>arrow-left</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/arrow-right/">
-        <rvt-icon name="arrow-right" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>arrow-right</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/arrow-up/">
-        <rvt-icon name="arrow-up" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>arrow-up</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/audio-off/">
-        <rvt-icon name="audio-off" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>audio-off</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/audio-on/">
-        <rvt-icon name="audio-on" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>audio-on</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/ban/">
-        <rvt-icon name="ban" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>ban</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/bell/">
-        <rvt-icon name="bell" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>bell</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/building/">
-        <rvt-icon name="building" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>building</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/calendar/">
-        <rvt-icon name="calendar" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>calendar</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/chat/">
-        <rvt-icon name="chat" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>chat</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/check/">
-        <rvt-icon name="check" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>check</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/check-all/">
-        <rvt-icon name="check-all" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>check-all</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/check-circle/">
-        <rvt-icon name="check-circle" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>check-circle</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/check-circle-breakout/">
-        <rvt-icon name="check-circle-breakout" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>check-circle-breakout</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/chevron-down/">
-        <rvt-icon name="chevron-down" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>chevron-down</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/chevron-left/">
-        <rvt-icon name="chevron-left" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>chevron-left</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/chevron-right/">
-        <rvt-icon name="chevron-right" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>chevron-right</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/chevron-up/">
-        <rvt-icon name="chevron-up" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>chevron-up</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/chevrons-left/">
-        <rvt-icon name="chevrons-left" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>chevrons-left</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/chevrons-right/">
-        <rvt-icon name="chevrons-right" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>chevrons-right</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/circle/">
-        <rvt-icon name="circle" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>circle</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/circle-solid/">
-        <rvt-icon name="circle-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>circle-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/clipboard/">
-        <rvt-icon name="clipboard" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>clipboard</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/clock/">
-        <rvt-icon name="clock" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>clock</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/close/">
-        <rvt-icon name="close" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>close</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/close-circle/">
-        <rvt-icon name="close-circle" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>close-circle</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/close-circle-solid/">
-        <rvt-icon name="close-circle-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>close-circle-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/code/">
-        <rvt-icon name="code" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>code</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/copy/">
-        <rvt-icon name="copy" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>copy</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/credit-card/">
-        <rvt-icon name="credit-card" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>credit-card</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/data/">
-        <rvt-icon name="data" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>data</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/download/">
-        <rvt-icon name="download" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>download</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/ellipsis/">
-        <rvt-icon name="ellipsis" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>ellipsis</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/ellipsis-vertical/">
-        <rvt-icon name="ellipsis-vertical" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>ellipsis-vertical</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/envelope/">
-        <rvt-icon name="envelope" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>envelope</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/exclamation/">
-        <rvt-icon name="exclamation" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>exclamation</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/expand/">
-        <rvt-icon name="expand" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>expand</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/eye/">
-        <rvt-icon name="eye" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>eye</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/file/">
-        <rvt-icon name="file" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>file</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/filter/">
-        <rvt-icon name="filter" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>filter</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/flag/">
-        <rvt-icon name="flag" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>flag</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/gear/">
-        <rvt-icon name="gear" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>gear</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/gears/">
-        <rvt-icon name="gears" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>gears</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/grid/">
-        <rvt-icon name="grid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>grid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/heart/">
-        <rvt-icon name="heart" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>heart</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/heart-solid/">
-        <rvt-icon name="heart-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>heart-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/home/">
-        <rvt-icon name="home" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>home</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/image/">
-        <rvt-icon name="image" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>image</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/info-circle/">
-        <rvt-icon name="info-circle" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>info-circle</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/lightning/">
-        <rvt-icon name="lightning" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>lightning</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/lightning-box/">
-        <rvt-icon name="lightning-box" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>lightning-box</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/link/">
-        <rvt-icon name="link" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>link</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/link-external/">
-        <rvt-icon name="link-external" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>link-external</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/list/">
-        <rvt-icon name="list" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>list</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/lock-closed/">
-        <rvt-icon name="lock-closed" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>lock-closed</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/lock-open/">
-        <rvt-icon name="lock-open" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>lock-open</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/magnifying-glass/">
-        <rvt-icon name="magnifying-glass" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>magnifying-glass</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/map-pin/">
-        <rvt-icon name="map-pin" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>map-pin</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/megaphone/">
-        <rvt-icon name="megaphone" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>megaphone</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/menu/">
-        <rvt-icon name="menu" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>menu</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/minus/">
-        <rvt-icon name="minus" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>minus</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/minus-circle/">
-        <rvt-icon name="minus-circle" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>minus-circle</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/note/">
-        <rvt-icon name="note" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>note</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/ordered-list/">
-        <rvt-icon name="ordered-list" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>ordered-list</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/pause/">
-        <rvt-icon name="pause" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>pause</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/pencil/">
-        <rvt-icon name="pencil" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>pencil</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/phone/">
-        <rvt-icon name="phone" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>phone</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/pin/">
-        <rvt-icon name="pin" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>pin</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/play/">
-        <rvt-icon name="play" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>play</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/plus/">
-        <rvt-icon name="plus" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>plus</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/plus-circle/">
-        <rvt-icon name="plus-circle" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>plus-circle</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/printer/">
-        <rvt-icon name="printer" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>printer</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/question-mark/">
-        <rvt-icon name="question-mark" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>question-mark</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/redo/">
-        <rvt-icon name="redo" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>redo</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/rss/">
-        <rvt-icon name="rss" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>rss</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/save/">
-        <rvt-icon name="save" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>save</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/settings/">
-        <rvt-icon name="settings" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>settings</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/sidebyside/">
-        <rvt-icon name="sidebyside" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>sidebyside</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/star/">
-        <rvt-icon name="star" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>star</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/star-solid/">
-        <rvt-icon name="star-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>star-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/sync/">
-        <rvt-icon name="sync" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>sync</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/transfer/">
-        <rvt-icon name="transfer" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>transfer</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/transfer-alternate/">
-        <rvt-icon name="transfer-alternate" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>transfer-alternate</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/trash/">
-        <rvt-icon name="trash" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>trash</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/undo/">
-        <rvt-icon name="undo" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>undo</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/upload/">
-        <rvt-icon name="upload" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>upload</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/user/">
-        <rvt-icon name="user" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>user</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/user-add/">
-        <rvt-icon name="user-add" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>user-add</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/user-add-solid/">
-        <rvt-icon name="user-add-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>user-add-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/user-remove/">
-        <rvt-icon name="user-remove" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>user-remove</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/user-remove-solid/">
-        <rvt-icon name="user-remove-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>user-remove-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/user-solid/">
-        <rvt-icon name="user-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>user-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/users/">
-        <rvt-icon name="users" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>users</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/users-group-solid/">
-        <rvt-icon name="users-group-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>users-group-solid</span>
-      </a>
-    </li>
-  
-    <li class="docs-list__item">
-      <a class="docs-list__link" href="../../icons/users-solid/">
-        <rvt-icon name="users-solid" class="rvt-p-all-xxs rvt-p-right-sm"></rvt-icon>
-        <span>users-solid</span>
-      </a>
-    </li>
-  
-</ul>
+<h2 class="rvt-ts-sm rvt-m-top-md rvt-text-bold">Usage</h2>
 
-  </div>
+<pre class="docs-code-block rvt-m-top-sm"><code>&lt;rvt-icon name=&quot;clock&quot;&gt;&lt;/rvt-icon&gt;</code></pre>
+<div class="rvt-flex rvt-wrap">
+  <a class="rvt-button rvt-button--secondary rvt-m-top-sm rvt-m-right-sm" download href="../../dist/rvt-icon-clock.svg">Download SVG<span class="rvt-sr-only">, clock icon</span></a>
+  <span class="docs-copy">
+    <button data-copy-button class="rvt-button rvt-button--secondary rvt-m-top-sm">Copy SVG<span class="rvt-sr-only">, clock icon</span></button>
+    <span class="docs-copy__alert" data-copy-alert role="alert"></span>
+  </span>
+</div>
+
+<script>
+const copyButton = document.querySelector('[data-copy-button]')
+const copyAlert = document.querySelector('[data-copy-alert]')
+if ('clipboard' in navigator) {
+  copyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g fill="currentColor">
+    <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+    <path d="M11.55,9.17,9,7.46V4A1,1,0,0,0,7,4V8a.94.94,0,0,0,0,.09,1,1,0,0,0,.11.37,1,1,0,0,0,.1.16,1,1,0,0,0,.14.14l.07.07,3,2a1,1,0,1,0,1.11-1.66Z"/>
+  </g>
+</svg>
+`).then(() => {
+      copyAlert.innerText = 'Copied'
+      setTimeout(() => {
+        copyAlert.innerText = ''
+      }, 2000)
+    })
+  })
+} else {
+  copyButton.remove()
+}
+</script>
+
+      </div>
+    </div>
+    <div class="docs-nav rvt-p-tb-md">
+      <nav class="rvt-container-xl" aria-label="Icons">
+  <h2 class="rvt-sr-only">Icons</h2>
+  <ul class="docs-nav__list">
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/alarm/">
+          <rvt-icon name="alarm" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">alarm</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/arrow-down/">
+          <rvt-icon name="arrow-down" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">arrow-down</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/arrow-left/">
+          <rvt-icon name="arrow-left" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">arrow-left</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/arrow-right/">
+          <rvt-icon name="arrow-right" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">arrow-right</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/arrow-up/">
+          <rvt-icon name="arrow-up" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">arrow-up</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/audio-off/">
+          <rvt-icon name="audio-off" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">audio-off</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/audio-on/">
+          <rvt-icon name="audio-on" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">audio-on</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/ban/">
+          <rvt-icon name="ban" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">ban</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/bell/">
+          <rvt-icon name="bell" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">bell</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/building/">
+          <rvt-icon name="building" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">building</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/calendar/">
+          <rvt-icon name="calendar" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">calendar</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/chat/">
+          <rvt-icon name="chat" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">chat</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/check/">
+          <rvt-icon name="check" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">check</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/check-all/">
+          <rvt-icon name="check-all" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">check-all</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/check-circle/">
+          <rvt-icon name="check-circle" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">check-circle</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/check-circle-breakout/">
+          <rvt-icon name="check-circle-breakout" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">check-circle-breakout</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/chevron-down/">
+          <rvt-icon name="chevron-down" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">chevron-down</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/chevron-left/">
+          <rvt-icon name="chevron-left" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">chevron-left</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/chevron-right/">
+          <rvt-icon name="chevron-right" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">chevron-right</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/chevron-up/">
+          <rvt-icon name="chevron-up" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">chevron-up</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/chevrons-left/">
+          <rvt-icon name="chevrons-left" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">chevrons-left</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/chevrons-right/">
+          <rvt-icon name="chevrons-right" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">chevrons-right</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/circle/">
+          <rvt-icon name="circle" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">circle</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/circle-solid/">
+          <rvt-icon name="circle-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">circle-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/clipboard/">
+          <rvt-icon name="clipboard" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">clipboard</span>
+        </a>
+      </li>
+    
+      
+      <li aria-current="page" class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/clock/">
+          <rvt-icon name="clock" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">clock</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/close/">
+          <rvt-icon name="close" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">close</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/close-circle/">
+          <rvt-icon name="close-circle" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">close-circle</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/close-circle-solid/">
+          <rvt-icon name="close-circle-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">close-circle-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/code/">
+          <rvt-icon name="code" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">code</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/copy/">
+          <rvt-icon name="copy" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">copy</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/credit-card/">
+          <rvt-icon name="credit-card" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">credit-card</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/data/">
+          <rvt-icon name="data" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">data</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/download/">
+          <rvt-icon name="download" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">download</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/ellipsis/">
+          <rvt-icon name="ellipsis" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">ellipsis</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/ellipsis-vertical/">
+          <rvt-icon name="ellipsis-vertical" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">ellipsis-vertical</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/envelope/">
+          <rvt-icon name="envelope" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">envelope</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/exclamation/">
+          <rvt-icon name="exclamation" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">exclamation</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/expand/">
+          <rvt-icon name="expand" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">expand</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/eye/">
+          <rvt-icon name="eye" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">eye</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/file/">
+          <rvt-icon name="file" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">file</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/filter/">
+          <rvt-icon name="filter" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">filter</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/flag/">
+          <rvt-icon name="flag" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">flag</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/gear/">
+          <rvt-icon name="gear" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">gear</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/gears/">
+          <rvt-icon name="gears" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">gears</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/grid/">
+          <rvt-icon name="grid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">grid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/heart/">
+          <rvt-icon name="heart" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">heart</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/heart-solid/">
+          <rvt-icon name="heart-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">heart-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/home/">
+          <rvt-icon name="home" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">home</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/image/">
+          <rvt-icon name="image" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">image</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/info-circle/">
+          <rvt-icon name="info-circle" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">info-circle</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/lightning/">
+          <rvt-icon name="lightning" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">lightning</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/lightning-box/">
+          <rvt-icon name="lightning-box" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">lightning-box</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/link/">
+          <rvt-icon name="link" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">link</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/link-external/">
+          <rvt-icon name="link-external" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">link-external</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/list/">
+          <rvt-icon name="list" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">list</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/lock-closed/">
+          <rvt-icon name="lock-closed" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">lock-closed</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/lock-open/">
+          <rvt-icon name="lock-open" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">lock-open</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/magnifying-glass/">
+          <rvt-icon name="magnifying-glass" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">magnifying-glass</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/map-pin/">
+          <rvt-icon name="map-pin" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">map-pin</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/megaphone/">
+          <rvt-icon name="megaphone" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">megaphone</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/menu/">
+          <rvt-icon name="menu" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">menu</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/minus/">
+          <rvt-icon name="minus" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">minus</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/minus-circle/">
+          <rvt-icon name="minus-circle" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">minus-circle</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/note/">
+          <rvt-icon name="note" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">note</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/ordered-list/">
+          <rvt-icon name="ordered-list" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">ordered-list</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/pause/">
+          <rvt-icon name="pause" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">pause</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/pencil/">
+          <rvt-icon name="pencil" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">pencil</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/phone/">
+          <rvt-icon name="phone" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">phone</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/pin/">
+          <rvt-icon name="pin" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">pin</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/play/">
+          <rvt-icon name="play" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">play</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/plus/">
+          <rvt-icon name="plus" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">plus</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/plus-circle/">
+          <rvt-icon name="plus-circle" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">plus-circle</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/printer/">
+          <rvt-icon name="printer" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">printer</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/question-mark/">
+          <rvt-icon name="question-mark" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">question-mark</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/redo/">
+          <rvt-icon name="redo" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">redo</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/rss/">
+          <rvt-icon name="rss" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">rss</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/save/">
+          <rvt-icon name="save" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">save</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/settings/">
+          <rvt-icon name="settings" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">settings</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/sidebyside/">
+          <rvt-icon name="sidebyside" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">sidebyside</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/star/">
+          <rvt-icon name="star" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">star</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/star-solid/">
+          <rvt-icon name="star-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">star-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/sync/">
+          <rvt-icon name="sync" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">sync</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/transfer/">
+          <rvt-icon name="transfer" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">transfer</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/transfer-alternate/">
+          <rvt-icon name="transfer-alternate" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">transfer-alternate</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/trash/">
+          <rvt-icon name="trash" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">trash</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/undo/">
+          <rvt-icon name="undo" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">undo</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/upload/">
+          <rvt-icon name="upload" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">upload</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/user/">
+          <rvt-icon name="user" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">user</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/user-add/">
+          <rvt-icon name="user-add" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">user-add</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/user-add-solid/">
+          <rvt-icon name="user-add-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">user-add-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/user-remove/">
+          <rvt-icon name="user-remove" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">user-remove</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/user-remove-solid/">
+          <rvt-icon name="user-remove-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">user-remove-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/user-solid/">
+          <rvt-icon name="user-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">user-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/users/">
+          <rvt-icon name="users" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">users</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/users-group-solid/">
+          <rvt-icon name="users-group-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">users-group-solid</span>
+        </a>
+      </li>
+    
+      
+      <li class="docs-nav__item">
+      
+        <a class="docs-nav__link" href="../../icons/users-solid/">
+          <rvt-icon name="users-solid" class="rvt-p-all-xxs"></rvt-icon>
+          <span class="rvt-p-left-xs">users-solid</span>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+    </div>
+  </main>
 </body>
 </html>
